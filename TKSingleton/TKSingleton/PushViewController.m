@@ -17,6 +17,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSArray *array = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:self options:nil];
+    // 若没有allocWithZone方法，此处打印出来的TKSingleton对象跟单例创建的对象地址不一样。导致问题出现。
+    NSLog(@"array:%@",array);
     // Do any additional setup after loading the view from its nib.
 }
 
