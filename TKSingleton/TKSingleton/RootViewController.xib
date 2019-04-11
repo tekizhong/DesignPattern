@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RootViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbp-3a-nUz">
+                    <rect key="frame" x="157" y="239.5" width="60" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="OWU-j4-d0t"/>
+                        <constraint firstAttribute="height" constant="36" id="yJA-JZ-wVl"/>
+                    </constraints>
+                    <state key="normal" title="Normal"/>
+                    <connections>
+                        <action selector="buttonClick:" destination="ysw-0b-hFi" eventType="touchUpInside" id="m6h-Ok-843"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69F-ja-KOV">
+                    <rect key="frame" x="157.5" y="325.5" width="60" height="36"/>
+                    <state key="normal" title="Push"/>
+                    <connections>
+                        <action selector="buttonClick:" destination="ysw-0b-hFi" eventType="touchUpInside" id="bx9-zh-jzp"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7y-bd-Ssw">
+                    <rect key="frame" x="157.5" y="411.5" width="60" height="36"/>
+                    <state key="normal" title="Present"/>
+                    <connections>
+                        <action selector="buttonClick:" destination="ysw-0b-hFi" eventType="touchUpInside" id="UZo-un-N4A"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="nbp-3a-nUz" firstAttribute="width" secondItem="69F-ja-KOV" secondAttribute="width" id="3EP-Q5-KJi"/>
+                <constraint firstItem="w7y-bd-Ssw" firstAttribute="width" secondItem="69F-ja-KOV" secondAttribute="width" id="BeL-Il-C77"/>
+                <constraint firstItem="nbp-3a-nUz" firstAttribute="centerX" secondItem="69F-ja-KOV" secondAttribute="centerX" id="Dhe-5d-XAP"/>
+                <constraint firstItem="nbp-3a-nUz" firstAttribute="height" secondItem="69F-ja-KOV" secondAttribute="height" id="HpT-C3-zXk"/>
+                <constraint firstItem="69F-ja-KOV" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="ZTy-05-yKU"/>
+                <constraint firstItem="69F-ja-KOV" firstAttribute="centerY" secondItem="Q5M-cg-NOt" secondAttribute="centerY" id="h3o-ok-hds"/>
+                <constraint firstItem="w7y-bd-Ssw" firstAttribute="centerX" secondItem="69F-ja-KOV" secondAttribute="centerX" id="kDI-ry-DC2"/>
+                <constraint firstItem="w7y-bd-Ssw" firstAttribute="top" secondItem="69F-ja-KOV" secondAttribute="bottom" constant="50" id="q9w-Pf-tR0"/>
+                <constraint firstItem="69F-ja-KOV" firstAttribute="top" secondItem="nbp-3a-nUz" secondAttribute="bottom" constant="50" id="uoj-pI-3gL"/>
+                <constraint firstItem="w7y-bd-Ssw" firstAttribute="height" secondItem="69F-ja-KOV" secondAttribute="height" id="xNa-NB-YYw"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+        <customObject id="ysw-0b-hFi" customClass="TKSingleton"/>
+    </objects>
+</document>
